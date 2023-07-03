@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Alldata } from "./AllData";
 const App = () => {
-  const [country, setCountry] = useState("");
-  const [city, setCity] = useState("");
+  const [country, setCountry] = useState<string>("");
+  const [city, setCity] = useState<string>("");
 
   const handleCountry = (event: any) => {
     setCountry(event.target.value);
@@ -10,8 +10,8 @@ const App = () => {
   const handleCity = (e:any) => {
     setCity(e.target.value);
   };
-  console.log(country);
-  console.log(city);
+  // console.log(country);
+  // console.log(city);
 
   const FilteredCities = country
     ? Alldata.find((cty) => cty.name === country)?.cities
@@ -26,15 +26,15 @@ const App = () => {
           <div class="inputField">
             <select value={country} onChange={handleCountry}>
               <option value="">Select Country</option>
-              {Alldata.map((data) => (
+              {Alldata.map((data:any) => (
                 <>
-                  <option value={data.name}>{data.name}</option>
+                  <option value={data.name}>{data.name as string}</option>
                 </>
               ))}
             </select>
             <select value={city} onChange={handleCity} disabled={!country}>
               <option value="">Select City</option>
-              {FilteredCities?.map((data) => (
+              {FilteredCities?.map((data:any) => (
                 <>
                   <option value={data}>{data}</option>
                 </>
