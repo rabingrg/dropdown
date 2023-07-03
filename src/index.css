@@ -1,0 +1,39 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: gainsboro;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.container {
+  height: 50vh;
+  width: 50vw;
+  background-color: lightblue;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.droptitle{
+  font-family: 'Courier New', Courier, monospace;
+  color: purple;
+  text-align: center;
+  text-shadow: 2px 2px 7px red ;
+  font-size: 50px;
+}
+
+.inputField{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  /* background-color: aquamarine; */
+}
+
+select{
+  height: 35px;
+  width: 200px;
+  outline: none;
+  margin: 5px;
+}
