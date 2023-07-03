@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import Location from "./Alldata.tsx"
-
+import { Alldata } from "./AllData";
 const App = () => {
   const [country, setCountry] = useState("");
   const [city, setCity] = useState("");
@@ -13,27 +12,6 @@ const App = () => {
   };
   console.log(country);
   console.log(city);
-
-  const Alldata = [
-    {
-      id: 1,
-      name: "Nepal",
-      value: "NP",
-      cities: ["Kathmandu", "Pokhara", "Bharatpur"],
-    },
-    {
-      id: 2,
-      name: "India",
-      value: "IND",
-      cities: ["Delhi", "Mumbai", "Banglore"],
-    },
-    {
-      id: 3,
-      name: "Pakistan",
-      value: "PK",
-      cities: ["Islamabad", "Lahore", "Karachi"],
-    },
-  ];
 
   const FilteredCities = country
     ? Alldata.find((cty) => cty.name === country)?.cities
